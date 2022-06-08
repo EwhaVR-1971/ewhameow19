@@ -28,7 +28,8 @@ public class HeartGaze : MonoBehaviour
             imgGaze.fillAmount = gvrTimer / totalTime;
 
             if(gvrTimer > totalTime){
-                cat.SetActive(false);
+                //cat.SetActive(false);
+                Destroy(cat);
             }
         }
     }
@@ -44,5 +45,6 @@ public class HeartGaze : MonoBehaviour
         gvrTimer = 0;
         imgGaze.fillAmount = 0;
         cat.transform.localScale = originScale;
+
     }
 }
