@@ -10,9 +10,9 @@ public class MovingCar : MonoBehaviour
 
     void Update()
     {
-        timer -= Time.deltaTime;
+        timer += Time.deltaTime;
 
-        if (timer > 0)
+        if (timer <  8)
         {
             //Action
             transform.position += new Vector3(0, 0, 0.9f);
