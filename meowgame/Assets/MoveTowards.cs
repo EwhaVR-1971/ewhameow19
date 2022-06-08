@@ -18,9 +18,9 @@ public class MoveTowards : MonoBehaviour
 
     void Update()
     {
-        if (isStopped)
-            return;
-        else
+        //if (isStopped)
+            //return;
+        //else
             MoveLookAt();
             //break;
     }
