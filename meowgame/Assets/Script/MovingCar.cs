@@ -14,7 +14,7 @@ public class MovingCar : MonoBehaviour
         if (timer < waitingTime)
         {
             //Action
-            transform.position += new Vector3(0, 0, 0.5f);
+            transform.position += new Vector3(0, 0, 0.65f);
         }
     }
 }
