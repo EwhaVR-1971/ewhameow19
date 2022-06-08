@@ -33,7 +33,7 @@ public class zombieScript : MonoBehaviour
         agent.destination = gameObject.transform.position;
         //stop the walking animation and play the falling back animation
         GetComponent<Animation>().Stop();
-        GetComponent<Animation>().Play("back_fall");
+        //GetComponent<Animation>().Play("back_fall");
         //destroy this zombie in six seconds.
         Destroy(gameObject, 6);
         //instantiate a new zombie
