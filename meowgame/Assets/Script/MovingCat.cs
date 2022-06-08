@@ -5,12 +5,17 @@ using UnityEngine;
 public class MovingCat : MonoBehaviour
 {
     public float timer;
-    public int waitingTime;
+    public float waitingTime;
     public GameObject cat1;
     public GameObject cat2;
-    
+    public GameObject thought1;
+    public GameObject thought2;
+    public GameObject thought3;
+
+
     void Update()
     {
+        waitingTime += Time.deltaTime;
         timer -= Time.deltaTime;
 
         if (timer > 0)
@@ -20,8 +25,18 @@ public class MovingCat : MonoBehaviour
         }
         else
         {
+            thought1.SetActive(true);
+        }
+        if (timer < -3)
+        {
             cat1.SetActive(false);
+            thought1.SetActive(false);
             cat2.SetActive(true);
+            thought2.SetActive(true);
+        }
+        if (waitingTime > 6)
+        {
+            thought3.SetActive(true);
         }
     }
 }

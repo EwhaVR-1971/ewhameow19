@@ -6,15 +6,20 @@ public class MovingCar : MonoBehaviour
 {
     public float timer;
     public int waitingTime;
+    public GameObject car;
 
     void Update()
     {
-        timer += Time.deltaTime;
+        timer -= Time.deltaTime;
 
-        if (timer < waitingTime)
+        if (timer > 0)
         {
             //Action
-            transform.position += new Vector3(0, 0, 0.65f);
+            transform.position += new Vector3(0, 0, 0.9f);
+        }
+        else
+        {
+            car.SetActive(false);
         }
     }
 }
